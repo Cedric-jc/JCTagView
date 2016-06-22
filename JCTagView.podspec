@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JCTagView"
-  s.version      = "0.0.1"
+  s.version      = "1.0"
   s.summary      = "A short description of JCTagView."
 
   # This description is used to generate tags and improve search results.
@@ -25,9 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+  					生成需要的Tag
                    DESC
 
-  s.homepage     = "http://EXAMPLE/JCTagView"
+  s.homepage     = "https://github.com/Cedric-jc/JCTagView.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,8 +39,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+
+  s.license      = { :type => "MIT", :file=>'LICENSE'}
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -64,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "7.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -79,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/JCTagView.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/Cedric-jc/JCTagView.git", :tag => '#{s.version}' }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +91,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = 'JCTagView.{h,m}'
+  # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -116,7 +117,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
+  s.framework  = "UIKit","Foundation"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
@@ -129,7 +130,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
